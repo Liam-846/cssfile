@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Button Effect</title>
+    <style type="text/css">
+        body {
+            height: 100vh;
+            font-family: sans-serif;
+            background-color: rgb(44, 54, 63);
+
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        a {
+            text-decoration: none;
+            color: #f0f0f0;
+            background-color: rgb(61, 38, 59);
+            font-size: 30px;
+
+            border: 2px solid whitesmoke;
+            padding: 30px 60px;
+
+            position: relative;
+
+            overflow: hidden;
+        }
+
+        a:hover::before {
+            transform: translate(-100%);
+        }
+
+        a::before {
+            content: "Hover";
+            width: 50%;
+            height: 100%;
+
+
+            display: flex;
+            align-items: center;
+            justify-content: right;
+
+            background-color: palevioletred;
+            position: absolute;
+            top: 0;
+            left: 0;
+
+            transform-origin: left bottom;
+
+            transition: all ease-in-out 1s;
+        }
+
+        a:hover::after {
+            transform: translate(100%);
+
+        }
+
+        a::after {
+            content: ".Me";
+            width: 50%;
+            height: 100%;
+
+            display: flex;
+            align-items: center;
+            justify-content: left;
+
+            background-color: palevioletred;
+            position: absolute;
+            top: 0;
+            right: 0;
+
+            transform-origin: right top;
+
+            transition: all ease-in-out 1s;
+
+        }
+    </style>
+</head>
+
+<body>
+
+    <a href="#">I Love You</a>
+
+</body>
+
+</html>

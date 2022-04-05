@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>3D Animation</title>
+
+    <style type="text/css">
+        * {
+            perspective: 1000px;
+        }
+
+        .container img {
+            width: 300px;
+            display: block;
+            margin: auto;
+            margin-top: 200px;
+
+            transition: all 2s;
+        }
+
+        .container img:hover {
+            transform: translateZ(500px);
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="container">
+
+        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSQRSIKTiXU0Rv2DeSNhXhJ7mGykllAZOmJShbqF_7ui7sGTLwdIpleFTM0Dke3gPxS5yY&usqp=CAU"
+            alt="A Husky">
+    </div>
+
+</body>
+
+</html>

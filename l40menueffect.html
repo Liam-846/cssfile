@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Menu Effect</title>
+    <style type="text/css">
+        body {
+            font-family: sans-serif;
+            height: 100vh;
+            background-color: orange;
+
+            display: flex;
+            justify-content: center;
+            align-items: center;
+
+            margin: 0;
+            overflow: hidden;
+        }
+
+        ul {
+            list-style-type: none;
+            padding: 0;
+            margin: 0;
+
+            display: flex;
+        }
+
+        ul li a {
+            text-decoration: none;
+            color: #333;
+            font-size: 22px;
+            padding: 12px 15px;
+            margin: 0px 10px;
+
+            position: relative;
+
+            transition: all 0.3s;
+
+        }
+
+        ul li a::before {
+            content: '';
+            width: 12px;
+            height: 12px;
+            /* background-color: #333; */
+            border: 3px solid red;
+
+            /* top right bottom left */
+            border-width: 0 0 3px 3px;
+
+            position: absolute;
+            bottom: 0;
+            left: 0;
+
+            opacity: 0;
+
+            transition: all 0.3s;
+        }
+
+        ul li a::after {
+            content: '';
+            width: 12px;
+            height: 12px;
+            /* background-color: #333; */
+            border: 3px solid red;
+            /* top right bottom left */
+            border-width: 3px 3px 0 0;
+
+            position: absolute;
+            top: 0;
+            right: 0;
+
+            opacity: 0;
+
+            transition: all 0.3s;
+        }
+
+        ul li a:hover {
+            background-color: red;
+            color: #fff;
+        }
+
+        ul li a:hover::before {
+            opacity: 1;
+            transform: translateX(-7px) translateY(7px);
+            transition-delay: 0.1s;
+        }
+
+        ul li a:hover::after {
+            opacity: 1;
+            transform: translateX(7px) translateY(-7px);
+            transition-delay: 0.1s;
+
+        }
+    </style>
+</head>
+
+<body>
+    <ul>
+        <li><a href="#">Home</a></li>
+        <li><a href="#">About</a></li>
+        <li><a href="#">Services</a></li>
+        <li><a href="#">Portfolio</a></li>
+        <li><a href="#">Contant</a></li>
+    </ul>
+</body>
+
+</html>

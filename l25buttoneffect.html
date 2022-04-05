@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Button Effect</title>
+    <style type="text/css">
+        body {
+            font-family: sans-serif;
+            height: 100vh;
+            background-color: rgb(39, 38, 38);
+
+            display: flex;
+            justify-content: center;
+            align-items: center;
+
+            margin: 0;
+            overflow: hidden;
+        }
+
+        a {
+            width: 200px;
+            height: 60px;
+            text-decoration: none;
+            text-transform: uppercase;
+
+            border: 2px solid orange;
+
+            color: orange;
+
+            text-align: center;
+            line-height: 60px;
+
+            font-weight: bold;
+            letter-spacing: 2px;
+
+            position: relative;
+
+            transition: all .3s;
+
+            overflow: hidden;
+        }
+
+        a::before,
+        a::after,
+        span::before,
+        span::after {
+            content: '';
+
+            width: 25%;
+            height: 100%;
+            background-color: orange;
+
+            position: absolute;
+
+            transition: all .3s;
+
+            z-index: -1;
+        }
+
+        a:hover {
+            color: black;
+        }
+
+        a::before {
+            top: 100%;
+            left: 0;
+        }
+
+        a::after {
+            top: -100%;
+            left: 25%;
+        }
+
+        a:hover::before {
+            top: 0;
+            left: 0;
+            /* transition-delay .2s; */
+        }
+
+        a:hover::after {
+            top: 0;
+            left: 25%;
+
+            transition-delay: .1s;
+        }
+
+        span::before {
+            top: 100%;
+            left: 50%;
+
+            transition-delay: .2s;
+        }
+
+        span::after {
+            top: -100%;
+            left: 75%;
+
+            transition-delay: .3s;
+        }
+
+        a:hover>span::before {
+            top: 0;
+            left: 50%;
+        }
+
+        a:hover>span::after {
+            top: 0;
+            left: 75%;
+        }
+    </style>
+</head>
+
+<body>
+    <a href="#"><span></span>Hover Me</a>
+</body>
+
+</html>

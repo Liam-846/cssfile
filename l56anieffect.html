@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Animation Effect</title>
+    <style type="text/css">
+        body {
+            font-family: sans-serif;
+            height: 100vh;
+            background-color: #222;
+
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        a {
+            text-decoration: none;
+            font-size: 50px;
+            color: white;
+            border: 3px solid #fff;
+            padding: 40px 80px;
+
+            position: relative;
+
+            transition: all 0.5s;
+
+            overflow: hidden;
+        }
+
+        a::before {
+            content: '';
+            width: 120px;
+            height: 100%;
+            background-color: tomato;
+
+            position: absolute;
+            top: 0;
+            left: 0;
+
+            z-index: -1;
+
+            transform: skew(-15deg);
+
+            transition: all 0.5s;
+
+            /* animation-name: myani;
+            animation-duration: 1s;
+            animation-iteration-count: infinite;
+            animation-direction: alternate; */
+            animation: myani 1.2s linear infinite;
+        }
+
+        a:hover::before {
+            width: 100%;
+            transform: skew(0deg);
+            animation: none;
+        }
+
+        @keyframes myani {
+            0% {
+                left: -120px;
+            }
+
+            100% {
+                left: 100%;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <a href="#">Hover Me</a>
+</body>
+
+</html>
